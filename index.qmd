@@ -1,0 +1,62 @@
+---
+title: "Massachusetts Income"
+author: "Jacob Khaykin"
+execute: 
+    echo: false
+    message: false
+    warning: false
+---
+
+
+```{r}
+# Load required libraries
+library(tidycensus)
+library(tidyverse)
+library(tigris)
+library(sf)
+options(tigris_use_cache = TRUE)
+
+# Set your Census API Key (only run once; replace with your own key)
+# Get one from: https://api.census.gov/data/key_signup.html
+census_api_key("2764286a16c248c5aaf79ac608ab4fb865cc6e9c", install = TRUE, overwrite = TRUE)
+
+
+
+# Variable for median household income
+income_var <- "B19013_001"
+
+# Get 2021 ACS 5-year median income data by census tract in Massachusetts
+ma_income <- get_acs(
+  geography = "tract",
+  variables = income_var,
+  state = "MA",
+  year = 2021,
+  geometry = TRUE
+)
+
+# Clean the data
+ma_income_clean <- ma_income %>%
+  rename(
+    median_income = estimate,
+    tract_name = NAME
+  )
+# Preview the data
+glimpse(ma_income_clean)
+
+# Optional: Quick map using ggplot
+ggplot(ma_income_clean) +
+  geom_sf(aes(fill = median_income), color = NA) +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey80") +
+  labs(
+    title = "Median Household Income by Census Tract in Massachusetts (2021)",
+    fill = "Income ($)"
+  ) +
+  theme_minimal()
+```
+
+This analysis uses the tidycensus and ggplot2 packages in R to visualize median household income by census tract in the state of Massachusetts, based on 2021 5-year American Community Survey (ACS) data.
+
+We accessed the data via the Census API and filtered for the ACS variable B19013_001, which represents median household income. Using sf and ggplot2, we generated a choropleth map showing income distribution across the state. The resulting visualization reveals clear geographic variation in income levels, with higher median incomes concentrated around the Greater Boston area and lower levels in more rural and western parts of the state.
+
+This type of analysis provides valuable insight into regional income disparities and can inform discussions on economic inequality, resource allocation, and public policy.
+
