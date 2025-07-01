@@ -4,13 +4,6 @@
     "href": "index.html",
     "title": "Massachusetts Income",
     "section": "",
-    "text": "[1] \"2764286a16c248c5aaf79ac608ab4fb865cc6e9c\"\n\n\nRows: 1,620\nColumns: 6\n$ GEOID         &lt;chr&gt; \"25025050200\", \"25023540103\", \"25025100500\", \"2500565220…\n$ tract_name    &lt;chr&gt; \"Census Tract 502, Suffolk County, Massachusetts\", \"Cens…\n$ variable      &lt;chr&gt; \"B19013_001\", \"B19013_001\", \"B19013_001\", \"B19013_001\", …\n$ median_income &lt;dbl&gt; 71402, 167604, 49644, 69574, 125833, 136444, 250001, 618…\n$ moe           &lt;dbl&gt; 10472, 31302, 23048, 12716, 37004, 44601, NA, 10620, 335…\n$ geometry      &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-71.04003 4..., MULTIPOLYGO…"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "text": "Rows: 1,620\nColumns: 6\n$ GEOID         &lt;chr&gt; \"25025050200\", \"25023540103\", \"25025100500\", \"2500565220…\n$ tract_name    &lt;chr&gt; \"Census Tract 502, Suffolk County, Massachusetts\", \"Cens…\n$ variable      &lt;chr&gt; \"B19013_001\", \"B19013_001\", \"B19013_001\", \"B19013_001\", …\n$ median_income &lt;dbl&gt; 71402, 167604, 49644, 69574, 125833, 136444, 250001, 618…\n$ moe           &lt;dbl&gt; 10472, 31302, 23048, 12716, 37004, 44601, NA, 10620, 335…\n$ geometry      &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-71.04003 4..., MULTIPOLYGO…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis analysis uses the tidycensus and ggplot2 packages in R to visualize median household income by census tract in the state of Massachusetts, based on 2021 5-year American Community Survey (ACS) data.\nWe accessed the data via the Census API and filtered for the ACS variable B19013_001, which represents median household income. Using sf and ggplot2, we generated a choropleth map showing income distribution across the state. The resulting visualization reveals clear geographic variation in income levels, with higher median incomes concentrated around the Greater Boston area and lower levels in more rural and western parts of the state.\nThis type of analysis provides valuable insight into regional income disparities and can inform discussions on economic inequality, resource allocation, and public policy."
   }
 ]

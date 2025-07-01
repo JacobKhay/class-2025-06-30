@@ -142,9 +142,6 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2764286a16c248c5aaf79ac608ab4fb865cc6e9c"</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,620
 Columns: 6
 $ GEOID         &lt;chr&gt; "25025050200", "25023540103", "25025100500", "2500565220…
@@ -161,7 +158,17 @@ $ geometry      &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-71.04003 4..., MULTIP
 </figure>
 </div>
 </div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
+</div>
+</div>
+<p>This analysis uses the tidycensus and ggplot2 packages in R to visualize median household income by census tract in the state of Massachusetts, based on 2021 5-year American Community Survey (ACS) data.</p>
+<p>We accessed the data via the Census API and filtered for the ACS variable B19013_001, which represents median household income. Using sf and ggplot2, we generated a choropleth map showing income distribution across the state. The resulting visualization reveals clear geographic variation in income levels, with higher median incomes concentrated around the Greater Boston area and lower levels in more rural and western parts of the state.</p>
+<p>This type of analysis provides valuable insight into regional income disparities and can inform discussions on economic inequality, resource allocation, and public policy.</p>
 
 
 
@@ -238,7 +245,7 @@ $ geometry      &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-71.04003 4..., MULTIP
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/JacobKhay\.github\.io\/class-2025-06-30\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
