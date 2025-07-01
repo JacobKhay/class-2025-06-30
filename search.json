@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Massachusetts Income",
+    "section": "",
+    "text": "[1] \"2764286a16c248c5aaf79ac608ab4fb865cc6e9c\"\n\n\nRows: 1,620\nColumns: 6\n$ GEOID         &lt;chr&gt; \"25025050200\", \"25023540103\", \"25025100500\", \"2500565220…\n$ tract_name    &lt;chr&gt; \"Census Tract 502, Suffolk County, Massachusetts\", \"Cens…\n$ variable      &lt;chr&gt; \"B19013_001\", \"B19013_001\", \"B19013_001\", \"B19013_001\", …\n$ median_income &lt;dbl&gt; 71402, 167604, 49644, 69574, 125833, 136444, 250001, 618…\n$ moe           &lt;dbl&gt; 10472, 31302, 23048, 12716, 37004, 44601, NA, 10620, 335…\n$ geometry      &lt;MULTIPOLYGON [°]&gt; MULTIPOLYGON (((-71.04003 4..., MULTIPOLYGO…"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
